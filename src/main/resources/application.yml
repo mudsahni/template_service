@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: template
+  data:
+    mongodb:
+      uri: mongodb://host.docker.internal:27017/paved_road
+github:
+  username: <username>
+  token: <token>
+
+logging:
+  level:
+    root: INFO
+    com.example.demo: DEBUG
+  file:
+    name: logs/spring-boot-application.log
+    path: logs
+
+gcp:
+  service-account-json: <config>
+python:
+  venv: ./paved-road-template-service
+
+encrypt:
+  script: ./scripts/encrypt_secret.py
